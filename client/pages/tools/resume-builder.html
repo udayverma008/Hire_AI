@@ -1,1 +1,50 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Resume builder | HireAI</title><link rel="stylesheet" href="../../assets/css/style.css"><link rel="stylesheet" href="../../assets/css/app.css"></head><body><header class="header"><nav class="nav wrap"><a class="logo" href="../../index.html"><b>H</b> Hire<span>AI</span></a><div class="links"><a href="../jobs/jobs.html">Find Jobs</a><a href="../dashboard/candidate.html">Dashboard</a></div><div class="actions"><a href="../auth/login.html">Log in</a></div></nav></header><main class="wrap page"><span class="eyebrow">CAREER TOOLKIT</span><h1>Resume builder.</h1><p class="muted">Bring your experience together in a clear, recruiter-friendly format.</p><form class="panel tool-form" id="resumeForm"><label>Your name<input id="name" value="Alex Morgan"></label><label>Professional headline<input id="headline" value="Product Designer"></label><label>Experience and impact<textarea id="experience" placeholder="Describe your role, achievements and measurable impact"></textarea></label><label>Education<textarea id="education" placeholder="Degree, school and graduation year"></textarea></label><button class="btn" type="submit">Preview resume ↗</button></form><article class="panel" id="preview" hidden><span class="eyebrow">RESUME PREVIEW</span><h2 id="previewName"></h2><p id="previewHeadline" class="muted"></p><hr><h3>Experience</h3><p id="previewExperience"></p><h3>Education</h3><p id="previewEducation"></p><button class="btn" onclick="window.print()">Print / save PDF</button></article></main><script>document.getElementById('resumeForm').onsubmit=e=>{e.preventDefault();['name','headline','experience','education'].forEach(x=>document.getElementById('preview'+x[0].toUpperCase()+x.slice(1)).textContent=document.getElementById(x).value||'Add details to complete this section.');document.getElementById('preview').hidden=false;document.getElementById('preview').scrollIntoView({behavior:'smooth'})}</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Build and print a polished resume by editing simple fields.">
+<title>Resume builder | HireAI</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/app.css">
+<link rel="stylesheet" href="../../assets/css/resume-builder.css">
+</head>
+<body class="resume-builder-page">
+<header class="header"><nav class="nav wrap">
+<a class="logo" href="../../index.html"><b>H</b> Hire<span>AI</span></a>
+<div class="links"><a href="../jobs/jobs.html">Find Jobs</a><a href="../dashboard/candidate.html">Dashboard</a><a class="selected" href="resume-builder.html">Resume builder</a></div>
+<div class="actions"><a href="../auth/login.html">Log in</a></div>
+</nav></header>
+<main class="wrap page">
+<div class="builder-heading"><div><span class="eyebrow">CAREER TOOLKIT</span><h1>Resume builder</h1><p class="muted">Edit the fields and your resume updates as you type. Your draft stays in this browser.</p></div><button class="btn print-button" id="printResume" type="button">Print / Save as PDF ↗</button></div>
+<div class="builder-toolbar panel">
+<label>Font<select id="resumeFont"><option value="Arial, sans-serif">Clean Sans</option><option value="Georgia, serif">Georgia</option><option value="'Times New Roman', serif">Classic Serif</option><option value="'Trebuchet MS', sans-serif">Trebuchet</option></select></label>
+<label>Accent color<select id="resumeColor"><option value="#254d9b">Navy</option><option value="#7457e8">HireAI purple</option><option value="#16745a">Forest</option><option value="#242936">Charcoal</option><option value="#a54c34">Terracotta</option></select></label>
+<label class="photo-picker">Photo <input id="resumePhoto" type="file" accept="image/*"><span>Choose image</span></label>
+<button class="text-button" id="clearPhoto" type="button">Remove photo</button>
+<span id="saveStatus" class="save-status" role="status">Example resume loaded</span>
+</div>
+<div class="builder-layout">
+<section class="editor-column" aria-label="Resume edit fields">
+<details class="editor-section" open><summary>Personal details</summary><div class="field-grid">
+<label>Full name<input data-field="name"></label><label>Professional headline<input data-field="headline"></label>
+<label>Location<input data-field="location"></label><label>Phone<input data-field="phone" type="tel"></label>
+<label>Email<input data-field="email" type="email"></label><label>LinkedIn URL<input data-field="linkedin" type="url"></label>
+<label>GitHub / portfolio URL<input data-field="github" type="url"></label>
+</div></details>
+<details class="editor-section" open><summary>Profile summary</summary><label class="full-field">About you<textarea data-field="summary" rows="5"></textarea></label></details>
+<section class="editor-section"><div class="section-title-row"><h2>Education</h2><button class="add-entry" type="button" data-add="education">+ Add education</button></div><div class="entry-editor" data-list="education"></div></section>
+<section class="editor-section"><div class="section-title-row"><h2>Experience / training</h2><button class="add-entry" type="button" data-add="experience">+ Add experience</button></div><div class="entry-editor" data-list="experience"></div></section>
+<section class="editor-section"><div class="section-title-row"><h2>Projects</h2><button class="add-entry" type="button" data-add="projects">+ Add project</button></div><div class="entry-editor" data-list="projects"></div></section>
+<details class="editor-section" open><summary>Skills</summary><label class="full-field">Technical skills <span class="field-hint">One skill per line. Use “Category: skill, skill” to group them.</span><textarea data-field="technicalSkills" rows="6"></textarea></label><label class="full-field">Professional skills <span class="field-hint">One skill per line.</span><textarea data-field="professionalSkills" rows="3"></textarea></label></details>
+<section class="editor-section"><div class="section-title-row"><h2>Achievements</h2><button class="add-entry" type="button" data-add="achievements">+ Add achievement</button></div><div class="entry-editor" data-list="achievements"></div></section>
+<section class="editor-section"><div class="section-title-row"><h2>Activities</h2><button class="add-entry" type="button" data-add="activities">+ Add activity</button></div><div class="entry-editor" data-list="activities"></div></section>
+<details class="editor-section"><summary>Declaration</summary><label class="full-field">Optional statement<textarea data-field="declaration" rows="2"></textarea></label></details>
+<div class="editor-actions"><button class="btn" id="saveResume" type="button">Save draft</button><button class="text-button" id="resetResume" type="button">Restore example</button><span id="editorMessage" role="status"></span></div>
+</section>
+<aside class="preview-column"><div class="preview-label"><span>LIVE PREVIEW</span><small>A4 page · print ready</small></div><article class="resume-paper" id="resumePaper" aria-label="Resume preview"></article></aside>
+</div>
+</main>
+<script src="../../assets/js/resume-builder.js"></script>
+</body>
+</html>
