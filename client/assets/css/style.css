@@ -67,3 +67,25 @@ button:hover {
     text-decoration: none;
     font-weight: bold;
 }
+
+/* Clear, accessible first impression */
+:root{scroll-behavior:smooth;scroll-padding-top:88px}
+body{font-family:"DM Sans",Arial,sans-serif;color:#211d32}
+.header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(12px)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #9b87ff;outline-offset:3px}
+.skip-link{position:fixed;top:-60px;left:14px;z-index:30;padding:11px 15px;background:#29233e;color:white;border-radius:8px}
+.skip-link:focus{top:12px}
+.hero{background:radial-gradient(ellipse at 78% 45%,#e8e2ff 0,transparent 36%),linear-gradient(115deg,#fbfaff,#f2efff)}
+.hero-grid{min-height:min(670px,calc(100svh - 78px));}
+.hero h1{max-width:680px;font-size:clamp(48px,6.1vw,76px);line-height:1.04;letter-spacing:-3.8px}
+.intro{font-size:16px;max-width:510px}
+.search{min-height:72px}
+.search input{font-size:14px}
+.proof{margin-top:28px}
+.btn{box-shadow:0 8px 18px #7457e82b;transition:transform .18s ease,background .18s ease,box-shadow .18s ease}
+.btn:hover{transform:translateY(-1px);box-shadow:0 11px 22px #7457e83b}
+.card,.job-card,.panel{transition:transform .18s ease,box-shadow .18s ease}
+.card:hover,.job-card:hover{transform:translateY(-2px);box-shadow:0 16px 32px #33264e0d}
+@media(max-width:800px){.hero-grid{min-height:unset;padding:66px 0 45px}.hero h1{font-size:clamp(46px,8vw,62px)}}
+@media(max-width:650px){.header{height:70px}.nav{gap:10px}.logo{font-size:21px;white-space:nowrap}.logo b{width:29px;height:29px}.actions{gap:9px;font-size:12px}.actions .btn{display:inline-block;padding:10px 11px;font-size:12px;white-space:nowrap}.menu{font-size:21px;padding:6px}.links{top:69px;box-shadow:0 14px 25px #29233e16}.hero-grid{padding-top:42px}.hero h1{font-size:clamp(43px,12vw,54px);letter-spacing:-2.5px;line-height:1.08;margin-top:16px}.intro{font-size:14px;line-height:1.7}.search{min-height:0}.search label{flex-basis:100%;border-bottom:1px solid #f0eef5}.search .btn{padding:13px}.popular{gap:10px}.art{margin-top:20px}.section h2,.recruiter h2{font-size:32px}}
+@media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
