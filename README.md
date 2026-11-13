@@ -1,11 +1,21 @@
 # HireAI
 
-HireAI is a frontend-only careers and recruitment platform prototype built with HTML, CSS, and vanilla JavaScript.
+HireAI is a recruitment and career platform prototype with a vanilla HTML/CSS/JavaScript frontend and a Node.js API. No third-party packages are required.
 
-## Open the website
+## Run it locally
 
-- For local preview, open `index.html` at the project root. It forwards to the full landing page in `client/`.
-- Or open `client/index.html` directly.
-- To preview with a local static server, run `python3 -m http.server 8000` from the project root and visit `http://localhost:8000`.
+1. Install Node.js 20 or newer.
+2. Open a terminal in the project folder.
+3. Run `cd server` and then `npm start`.
+4. Open `http://localhost:3000`.
 
-The interface includes job search, job details, candidate and recruiter dashboards, account screens, profile editing, a resume builder, and career guidance. Sample data and form feedback are frontend demos; there is no backend or persistent account storage yet.
+The first start creates `server/data/hireai.json` with sample job listings. New accounts, profiles, recruiter job posts, applications, and saved roles are stored there. That local database is ignored by Git. Use a candidate account to apply for jobs, or select Recruiter during sign-up to post roles and manage applications.
+
+## Current limits
+
+- This is suitable for local development and demonstration. The JSON file and in-memory sessions are not a production database/session store.
+- Email delivery and password reset need an email provider.
+- AI career suggestions are illustrative; a real AI provider requires a server-side API key.
+- To make the backend available publicly, deploy the Node server and its persistent storage over HTTPS. GitHub Pages alone can serve the static frontend but cannot run this API.
+
+The resume builder supports local draft saving, font and color choices, optional photo, editable sections, and print-to-PDF.

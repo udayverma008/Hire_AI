@@ -1,0 +1,8 @@
+{
+  "name": "hireai-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HireAI same-origin API and static frontend server",
+  "scripts": { "start": "node server.js", "dev": "node --watch server.js" },
+  "engines": { "node": ">=20" }
+}
