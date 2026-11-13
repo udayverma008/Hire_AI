@@ -89,3 +89,15 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #9b87
 @media(max-width:800px){.hero-grid{min-height:unset;padding:66px 0 45px}.hero h1{font-size:clamp(46px,8vw,62px)}}
 @media(max-width:650px){.header{height:70px}.nav{gap:10px}.logo{font-size:21px;white-space:nowrap}.logo b{width:29px;height:29px}.actions{gap:9px;font-size:12px}.actions .btn{display:inline-block;padding:10px 11px;font-size:12px;white-space:nowrap}.menu{font-size:21px;padding:6px}.links{top:69px;box-shadow:0 14px 25px #29233e16}.hero-grid{padding-top:42px}.hero h1{font-size:clamp(43px,12vw,54px);letter-spacing:-2.5px;line-height:1.08;margin-top:16px}.intro{font-size:14px;line-height:1.7}.search{min-height:0}.search label{flex-basis:100%;border-bottom:1px solid #f0eef5}.search .btn{padding:13px}.popular{gap:10px}.art{margin-top:20px}.section h2,.recruiter h2{font-size:32px}}
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+/* Shared navigation on every product page */
+@media(max-width:900px){
+  .header .nav{position:relative;gap:12px}
+  .header .menu{display:block;border:0;background:transparent;color:#332d47;font-size:22px;margin-left:auto;padding:7px;cursor:pointer}
+  .header .links{display:none;position:absolute;top:calc(100% + 1px);left:-22px;right:-22px;z-index:20;background:#fff;border-top:1px solid #f0eef5;box-shadow:0 18px 28px #29233e16;padding:8px 18px;flex-direction:column;gap:0}
+  .header .links.open{display:flex}
+  .header .links a{padding:13px 9px;border-bottom:1px solid #f0eef5}
+  .header .links a:last-child{border:0}
+  .header .actions{gap:12px}
+}
+@media(max-width:420px){.header .logo{font-size:19px}.header .actions{gap:8px;font-size:12px}.header .actions .btn{padding:9px 10px}}

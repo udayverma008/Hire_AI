@@ -235,4 +235,18 @@
     .login-container {
         padding: 28px
     }
-}
+}.login-shell .auth-aside{background:radial-gradient(circle at 75% 25%,#594b82 0,transparent 37%),linear-gradient(145deg,#29233e,#483a70)}
+.login-card{padding:34px;background:white;border:1px solid #eeebf4;border-radius:18px;box-shadow:0 20px 70px #33264e10}
+.login-card h2{font-size:34px}
+.login-card .muted{margin-bottom:23px}
+.login-card form>label{display:block;font-size:12px;font-weight:700;margin:16px 0;color:#332d47}
+.login-card input:not([type=checkbox]){width:100%;padding:13px 14px;border:1px solid #e6e3ec;border-radius:9px;margin-top:7px;font:14px 'DM Sans',sans-serif;color:#302a40}
+.login-card input:focus{border-color:#7457e8;outline:3px solid #7457e822}
+.password-input{position:relative}
+.password-input button{position:absolute;right:11px;top:17px;border:0;background:none;color:#7457e8;font:700 11px 'DM Sans',sans-serif;cursor:pointer}
+.login-links{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:9px;font-size:11px;color:#777487}
+.login-links a{color:#7457e8;font-weight:700}
+.login-card .auth-submit{width:100%;margin-top:12px}
+.login-card .form-note{min-height:17px;margin:10px 0 0}
+.auth-submit:disabled{opacity:.65;cursor:wait}
+@media(max-width:760px){.login-card{padding:25px 21px}.login-links{flex-direction:column}}
