@@ -1,3 +1,452 @@
-.page{padding-top:58px;padding-bottom:90px}.page>h1{font:800 clamp(36px,5vw,54px)/1.1 Manrope,sans-serif;letter-spacing:-2px;margin:13px 0}.muted{color:#777487;line-height:1.7}.filterbar{display:grid;grid-template-columns:1.5fr 1fr 1fr auto;gap:9px;background:#fff;padding:10px;border:1px solid #ece9f4;border-radius:13px;box-shadow:0 8px 24px #3e2b740a;margin:28px 0}.filterbar input,.filterbar select,.results-head select,.tool-form input,.tool-form textarea,.tool-form select{padding:12px;border:1px solid #e8e5ee;border-radius:8px;background:white;color:#332d47;font:13px 'DM Sans',sans-serif}.results-head{display:flex;align-items:center;justify-content:space-between;margin:24px 0 13px;font-size:13px}.job-layout{display:grid;grid-template-columns:210px 1fr;gap:18px}.filter-card,.job-card,.detail-card,.panel{background:white;border:1px solid #ece9f4;border-radius:14px;padding:20px}.filter-card{align-self:start}.filter-card h3{font:700 14px Manrope;margin:3px 0 17px}.filter-card label{display:flex;gap:8px;margin:14px 0;font-size:12px}.filter-card input{accent-color:#7457e8}.filter-card .muted{font-size:11px;margin-top:20px}.job-list{display:grid;gap:12px}.job-card{display:flex;gap:15px}.company-mark{flex:none;width:45px;height:45px;display:grid;place-items:center;border-radius:12px;background:#eee9ff;color:#7457e8;font:800 19px Manrope}.company-mark.large{width:56px;height:56px;margin:22px 0}.job-info{flex:1;min-width:0}.job-title-row{display:flex;justify-content:space-between;gap:12px}.job-title-row h2{font:700 17px Manrope;margin:1px 0 5px}.job-title-row p,.job-desc{color:#777487;font-size:12px;margin:0}.job-title-row p span{margin:0 5px}.save-job{border:0;background:none;font-size:22px;color:#8c8699;cursor:pointer}.save-job.saved{color:#7457e8}.chips{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}.chips span{background:#f4f1ff;color:#6452a4;padding:5px 9px;border-radius:20px;font-size:10px}.job-foot{display:flex;justify-content:space-between;align-items:center;font-size:12px}.job-foot a{color:#7457e8;font-weight:700}.job-desc{margin-top:9px}.empty-state{background:white;border:1px dashed #d9d3e7;border-radius:14px;padding:35px;text-align:center;color:#777487;font-size:13px}.detail-card{max-width:820px;margin:24px auto;padding:35px}.detail-card h1{font:800 36px Manrope;margin:0}.detail-card h2{font:700 18px Manrope;margin:25px 0 8px}.detail-card p,.detail-card li{font-size:13px;line-height:1.8;color:#666276}.detail-card ul{padding-left:20px}.detail-card hr{border:0;border-top:1px solid #eee;margin-top:28px}.back-link{font-size:13px;color:#7457e8}.form-note{color:#4c9473;font-size:12px}.dash-layout{display:grid;grid-template-columns:220px 1fr;gap:22px}.dash-side{background:#29233e;color:white;border-radius:16px;padding:20px;height:max-content}.dash-side a{display:block;color:#ddd6ef;font-size:13px;padding:12px 10px;border-radius:8px}.dash-side a:hover,.dash-side a.active{background:#41385b;color:#fff}.dash-main{min-width:0}.dash-main h1{font:800 32px Manrope;margin:0 0 8px}.metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}.metric{background:white;border:1px solid #ece9f4;border-radius:13px;padding:18px}.metric strong{display:block;font:800 26px Manrope}.metric small{color:#777487}.panel{margin-top:14px}.panel h2{font:700 16px Manrope;margin:2px 0 16px}.activity-row{display:flex;justify-content:space-between;gap:12px;border-top:1px solid #f0eef5;padding:13px 0;font-size:12px}.activity-row small{color:#777487}.status-pill{color:#4b8f70;background:#eaf7f0;padding:5px 9px;border-radius:20px;font-size:10px}.tool-form{display:grid;gap:14px;max-width:690px;margin-top:25px}.tool-form label{font-size:12px;font-weight:700;display:grid;gap:7px}.tool-form textarea{min-height:110px;resize:vertical}.tool-form button{justify-self:start}.tool-form [role=status]{color:#4b8f70;font-size:13px;line-height:1.7}.profile-head{display:flex;align-items:center;gap:14px;margin:20px 0}.avatar{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;background:#eee9ff;color:#7457e8;font:800 21px Manrope}@media(max-width:760px){.filterbar{grid-template-columns:1fr 1fr}.filterbar .btn{grid-column:1/-1}.job-layout,.dash-layout{grid-template-columns:1fr}.filter-card{display:none}.dash-side{display:flex;overflow:auto;gap:4px;padding:9px}.dash-side a{white-space:nowrap}.metric-grid{grid-template-columns:1fr 1fr}.detail-card{padding:22px}.page{padding-top:40px}}
-.panel-action{float:right;color:#7457e8;font-size:12px;font-weight:700}
-@media print{.header,.dash-side,.tool-form button,.eyebrow{display:none!important}.page{padding:0}.panel{border:0}.detail-card{box-shadow:none}}
+.page {
+    padding-top: 58px;
+    padding-bottom: 90px
+}
+
+.page>h1 {
+    font: 800 clamp(36px, 5vw, 54px)/1.1 Manrope, sans-serif;
+    letter-spacing: -2px;
+    margin: 13px 0
+}
+
+.muted {
+    color: #777487;
+    line-height: 1.7
+}
+
+.filterbar {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr auto;
+    gap: 9px;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ece9f4;
+    border-radius: 13px;
+    box-shadow: 0 8px 24px #3e2b740a;
+    margin: 28px 0
+}
+
+.filterbar input,
+.filterbar select,
+.results-head select,
+.tool-form input,
+.tool-form textarea,
+.tool-form select {
+    padding: 12px;
+    border: 1px solid #e8e5ee;
+    border-radius: 8px;
+    background: white;
+    color: #332d47;
+    font: 13px 'DM Sans', sans-serif
+}
+
+.results-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 24px 0 13px;
+    font-size: 13px
+}
+
+.job-layout {
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    gap: 18px
+}
+
+.filter-card,
+.job-card,
+.detail-card,
+.panel {
+    background: white;
+    border: 1px solid #ece9f4;
+    border-radius: 14px;
+    padding: 20px
+}
+
+.filter-card {
+    align-self: start
+}
+
+.filter-card h3 {
+    font: 700 14px Manrope;
+    margin: 3px 0 17px
+}
+
+.filter-card label {
+    display: flex;
+    gap: 8px;
+    margin: 14px 0;
+    font-size: 12px
+}
+
+.filter-card input {
+    accent-color: #7457e8
+}
+
+.filter-card .muted {
+    font-size: 11px;
+    margin-top: 20px
+}
+
+.job-list {
+    display: grid;
+    gap: 12px
+}
+
+.job-card {
+    display: flex;
+    gap: 15px
+}
+
+.company-mark {
+    flex: none;
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: #eee9ff;
+    color: #7457e8;
+    font: 800 19px Manrope
+}
+
+.company-mark.large {
+    width: 56px;
+    height: 56px;
+    margin: 22px 0
+}
+
+.job-info {
+    flex: 1;
+    min-width: 0
+}
+
+.job-title-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px
+}
+
+.job-title-row h2 {
+    font: 700 17px Manrope;
+    margin: 1px 0 5px
+}
+
+.job-title-row p,
+.job-desc {
+    color: #777487;
+    font-size: 12px;
+    margin: 0
+}
+
+.job-title-row p span {
+    margin: 0 5px
+}
+
+.save-job {
+    border: 0;
+    background: none;
+    font-size: 22px;
+    color: #8c8699;
+    cursor: pointer
+}
+
+.save-job.saved {
+    color: #7457e8
+}
+
+.chips {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    margin: 12px 0
+}
+
+.chips span {
+    background: #f4f1ff;
+    color: #6452a4;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 10px
+}
+
+.job-foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px
+}
+
+.job-foot a {
+    color: #7457e8;
+    font-weight: 700
+}
+
+.job-desc {
+    margin-top: 9px
+}
+
+.empty-state {
+    background: white;
+    border: 1px dashed #d9d3e7;
+    border-radius: 14px;
+    padding: 35px;
+    text-align: center;
+    color: #777487;
+    font-size: 13px
+}
+
+.detail-card {
+    max-width: 820px;
+    margin: 24px auto;
+    padding: 35px
+}
+
+.detail-card h1 {
+    font: 800 36px Manrope;
+    margin: 0
+}
+
+.detail-card h2 {
+    font: 700 18px Manrope;
+    margin: 25px 0 8px
+}
+
+.detail-card p,
+.detail-card li {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #666276
+}
+
+.detail-card ul {
+    padding-left: 20px
+}
+
+.detail-card hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin-top: 28px
+}
+
+.back-link {
+    font-size: 13px;
+    color: #7457e8
+}
+
+.form-note {
+    color: #4c9473;
+    font-size: 12px
+}
+
+.dash-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 22px
+}
+
+.dash-side {
+    background: #29233e;
+    color: white;
+    border-radius: 16px;
+    padding: 20px;
+    height: max-content
+}
+
+.dash-side a {
+    display: block;
+    color: #ddd6ef;
+    font-size: 13px;
+    padding: 12px 10px;
+    border-radius: 8px
+}
+
+.dash-side a:hover,
+.dash-side a.active {
+    background: #41385b;
+    color: #fff
+}
+
+.dash-main {
+    min-width: 0
+}
+
+.dash-main h1 {
+    font: 800 32px Manrope;
+    margin: 0 0 8px
+}
+
+.metric-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 20px 0
+}
+
+.metric {
+    background: white;
+    border: 1px solid #ece9f4;
+    border-radius: 13px;
+    padding: 18px
+}
+
+.metric strong {
+    display: block;
+    font: 800 26px Manrope
+}
+
+.metric small {
+    color: #777487
+}
+
+.panel {
+    margin-top: 14px
+}
+
+.panel h2 {
+    font: 700 16px Manrope;
+    margin: 2px 0 16px
+}
+
+.activity-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    border-top: 1px solid #f0eef5;
+    padding: 13px 0;
+    font-size: 12px
+}
+
+.activity-row small {
+    color: #777487
+}
+
+.status-pill {
+    color: #4b8f70;
+    background: #eaf7f0;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 10px
+}
+
+.tool-form {
+    display: grid;
+    gap: 14px;
+    max-width: 690px;
+    margin-top: 25px
+}
+
+.tool-form label {
+    font-size: 12px;
+    font-weight: 700;
+    display: grid;
+    gap: 7px
+}
+
+.tool-form textarea {
+    min-height: 110px;
+    resize: vertical
+}
+
+.tool-form button {
+    justify-self: start
+}
+
+.tool-form [role=status] {
+    color: #4b8f70;
+    font-size: 13px;
+    line-height: 1.7
+}
+
+.profile-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 20px 0
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+    background: #eee9ff;
+    color: #7457e8;
+    font: 800 21px Manrope
+}
+
+@media(max-width:760px) {
+    .filterbar {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .filterbar .btn {
+        grid-column: 1/-1
+    }
+
+    .job-layout,
+    .dash-layout {
+        grid-template-columns: 1fr
+    }
+
+    .filter-card {
+        display: none
+    }
+
+    .dash-side {
+        display: flex;
+        overflow: auto;
+        gap: 4px;
+        padding: 9px
+    }
+
+    .dash-side a {
+        white-space: nowrap
+    }
+
+    .metric-grid {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .detail-card {
+        padding: 22px
+    }
+
+    .page {
+        padding-top: 40px
+    }
+}
+
+.panel-action {
+    float: right;
+    color: #7457e8;
+    font-size: 12px;
+    font-weight: 700
+}
+
+@media print {
+
+    .header,
+    .dash-side,
+    .tool-form button,
+    .eyebrow {
+        display: none !important
+    }
+
+    .page {
+        padding: 0
+    }
+
+    .panel {
+        border: 0
+    }
+
+    .detail-card {
+        box-shadow: none
+    }
+}.app-review-controls{display:flex;align-items:center;gap:8px}.app-review-controls select,.application-note{border:1px solid #e5e2eb;border-radius:8px;padding:8px 10px;background:#fff;color:#332d47;font:12px 'DM Sans',sans-serif}.application-note{display:block;width:100%;margin:8px 0 14px;resize:vertical}
+
+.tool-form .field-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.tool-form .field-grid label{margin:0}.company-field[hidden]{display:none}
+.actions [data-logout]{border:0;background:transparent;color:#7457e8;font:700 12px 'DM Sans',sans-serif;cursor:pointer;padding:8px}

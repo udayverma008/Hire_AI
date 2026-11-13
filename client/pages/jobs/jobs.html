@@ -1,1 +1,50 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Find jobs | HireAI</title><link rel="stylesheet" href="../../assets/css/style.css"><link rel="stylesheet" href="../../assets/css/app.css"></head><body><header class="header"><nav class="nav wrap"><a class="logo" href="../../index.html"><b>H</b> Hire<span>AI</span></a><div class="links"><a href="../../index.html">Home</a><a class="selected" href="jobs.html">Find Jobs</a><a href="../dashboard/candidate.html">Dashboard</a></div><div class="actions"><a href="../auth/login.html">Log in</a><a class="btn small" href="../auth/register.html">Get started ↗</a></div></nav></header><main class="wrap page"><span class="eyebrow">OPPORTUNITIES FOR YOU</span><h1>Find your next role.</h1><p class="muted">Explore roles that match your skills and ambitions.</p><form class="filterbar" id="filters"><input id="keyword" placeholder="Job title, skill or company"><input id="location" placeholder="City or remote"><select id="type"><option value="">All job types</option><option>Full-time</option><option>Contract</option><option>Remote</option></select><button class="btn">Search jobs</button></form><div class="results-head"><strong id="resultCount">6 opportunities</strong><select id="sort"><option>Most relevant</option><option>Newest first</option></select></div><div class="job-layout"><aside class="filter-card"><h3>Quick filters</h3><label><input type="checkbox" value="Remote"> Remote</label><label><input type="checkbox" value="Full-time"> Full-time</label><label><input type="checkbox" value="Design"> Design</label><label><input type="checkbox" value="Engineering"> Engineering</label><p class="muted">Filters are applied to this sample listing.</p></aside><section class="job-list" id="jobList"></section></div></main><script src="jobs.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Find jobs | HireAI</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/app.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav wrap"><a class="logo" href="../../index.html"><b>H</b> Hire<span>AI</span></a>
+            <div class="links"><a href="../../index.html">Home</a><a class="selected" href="jobs.html">Find Jobs</a><a
+                    href="../dashboard/candidate.html">Dashboard</a></div>
+            <div class="actions"><a href="../auth/login.html">Log in</a><a class="btn small"
+                    href="../auth/register.html">Get started ↗</a></div>
+        </nav>
+    </header>
+    <main class="wrap page"><span class="eyebrow">OPPORTUNITIES FOR YOU</span>
+        <h1>Find your next role.</h1>
+        <p class="muted">Explore roles that match your skills and ambitions.</p>
+        <form class="filterbar" id="filters"><input id="keyword" placeholder="Job title, skill or company"><input
+                id="location" placeholder="City or remote"><select id="type">
+                <option value="">All job types</option>
+                <option>Full-time</option>
+                <option>Contract</option>
+                <option>Remote</option>
+            </select><button class="btn">Search jobs</button></form>
+        <div class="results-head"><strong id="resultCount">6 opportunities</strong><select id="sort">
+                <option>Most relevant</option>
+                <option>Newest first</option>
+            </select></div>
+        <div class="job-layout">
+            <aside class="filter-card">
+                <h3>Quick filters</h3><label><input type="checkbox" value="Remote"> Remote</label><label><input
+                        type="checkbox" value="Full-time"> Full-time</label><label><input type="checkbox"
+                        value="Design"> Design</label><label><input type="checkbox" value="Engineering">
+                    Engineering</label>
+                <p class="muted">Filters update the live job results.</p>
+            </aside>
+            <section class="job-list" id="jobList"></section>
+        </div>
+    </main>
+    <script src="../../assets/js/api.js"></script>
+    <script src="jobs.js"></script>
+</body>
+
+</html>

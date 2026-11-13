@@ -1,1 +1,46 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Create account | HireAI</title><link rel="stylesheet" href="../../assets/css/style.css"><link rel="stylesheet" href="../../assets/css/auth.css"></head><body><main class="auth-shell"><aside class="auth-aside"><a class="logo" href="../../index.html"><b>H</b> Hire<span>AI</span></a><div><span class="eyebrow">YOUR NEXT CHAPTER</span><h1>Make your next move a great one.</h1><p>Build your profile, find work that fits, and move forward with confidence.</p><div class="auth-quote">The right opportunity starts with being seen.</div></div><small>Smarter connections. Brighter careers.</small></aside><section class="auth-main"><a class="back-link" href="../../index.html">← Back to home</a><div class="auth-card"><span class="eyebrow">GET STARTED</span><h2>Create your account</h2><p class="muted">Join as a candidate or recruiter.</p><div class="role-switch"><button class="active" type="button" data-role="Candidate">I'm a candidate</button><button type="button" data-role="Recruiter">I'm a recruiter</button></div><form data-demo-form data-success="Account details captured for this frontend demo. Connect an API to create your account."><input type="hidden" id="role" value="Candidate"><label>Full name<input required placeholder="e.g. Alex Morgan"></label><label>Email address<input type="email" required placeholder="you@example.com"></label><label>Password<input id="password" type="password" minlength="8" required placeholder="At least 8 characters"></label><label class="check"><input type="checkbox" required> I agree to the <a href="#terms">terms and privacy policy</a></label><button class="btn auth-submit">Create account <span>↗</span></button><p role="status" class="form-note"></p></form><p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p></div></section></main><script src="../../assets/js/main.js"></script><script>document.querySelectorAll('[data-role]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-role]').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById('role').value=b.dataset.role}))</script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Create account | HireAI</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/auth.css">
+</head>
+
+<body>
+    <main class="auth-shell">
+        <aside class="auth-aside"><a class="logo" href="../../index.html"><b>H</b> Hire<span>AI</span></a>
+            <div><span class="eyebrow">YOUR NEXT CHAPTER</span>
+                <h1>Make your next move a great one.</h1>
+                <p>Build your profile, find work that fits, and move forward with confidence.</p>
+                <div class="auth-quote">The right opportunity starts with being seen.</div>
+            </div><small>Smarter connections. Brighter careers.</small>
+        </aside>
+        <section class="auth-main"><a class="back-link" href="../../index.html">← Back to home</a>
+            <div class="auth-card"><span class="eyebrow">GET STARTED</span>
+                <h2>Create your account</h2>
+                <p class="muted">Join as a candidate or recruiter.</p>
+                <div class="role-switch"><button class="active" type="button" data-role="Candidate">I'm a
+                        candidate</button><button type="button" data-role="Recruiter">I'm a recruiter</button></div>
+                <form id="registerForm">
+                    <input type="hidden" name="role" value="Candidate"><label>Full name<input name="name" required
+                            placeholder="e.g. Alex Morgan"></label><label>Email address<input type="email" required
+                            name="email" placeholder="you@example.com"></label><label>Password<input name="password" id="password" type="password"
+                            minlength="8" required placeholder="At least 8 characters"></label><label
+                        class="check"><input type="checkbox" required> I agree to the <a href="#terms">terms and privacy
+                            policy</a></label><button class="btn auth-submit">Create account <span>↗</span></button>
+                    <p role="status" class="form-note"></p>
+                </form>
+                <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
+            </div>
+        </section>
+    </main>
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/api.js"></script>
+    <script src="../../assets/js/auth.js"></script>
+    <script>document.querySelectorAll('[data-role]').forEach(b => b.addEventListener('click', () => { document.querySelectorAll('[data-role]').forEach(x => x.classList.remove('active')); b.classList.add('active'); document.querySelector('[name="role"]').value = b.dataset.role }))</script>
+</body>
+
+</html>

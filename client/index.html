@@ -1,32 +1,130 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Discover job opportunities, build your career profile, and find your next move with HireAI."><meta name="theme-color" content="#f7f5ff">
-<title>HireAI | Find work that fits your future</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Discover job opportunities, build your career profile, and find your next move with HireAI.">
+    <meta name="theme-color" content="#f7f5ff">
+    <title>HireAI | Find work that fits your future</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-<a class="skip-link" href="#main-content">Skip to content</a>
-<header class="header"><nav class="nav wrap">
-<a class="logo" href="index.html"><b>H</b> Hire<span>AI</span></a>
-<button class="menu" id="menu" aria-label="Toggle menu" aria-expanded="false" aria-controls="links">☰</button>
-<div class="links" id="links"><a class="selected" href="index.html">Home</a><a href="pages/jobs/jobs.html">Find Jobs</a><a href="#how">How it works</a><a href="#about">About</a></div>
-<div class="actions"><a href="pages/auth/login.html">Log in</a><a class="btn small" href="pages/auth/register.html">Get started ↗</a></div>
-</nav></header>
-<main id="main-content">
-<section class="hero"><div class="wrap hero-grid"><div class="hero-copy">
-<div class="eyebrow"><i></i> YOUR NEXT OPPORTUNITY STARTS HERE</div>
-<h1>Find work that<br><em>fits your future.</em></h1>
-<p class="intro">A smarter way to discover opportunities. Let AI help you showcase your strengths and connect with the right people.</p>
-<form class="search" id="search"><label>⌕ <input id="keyword" placeholder="Job title, skill or company"></label><label>⌖ <input id="location" placeholder="City or remote"></label><button class="btn">Search jobs →</button></form>
-<p class="popular"><b>Popular:</b> <a href="pages/jobs/jobs.html?keyword=Developer">Developer</a><a href="pages/jobs/jobs.html?keyword=Designer">Designer</a><a href="pages/jobs/jobs.html?keyword=Marketing">Marketing</a><a href="pages/jobs/jobs.html?keyword=Data">Data Analyst</a></p>
-<div class="proof"><div class="avatars"><b>U</b><b>A</b><b>M</b><b>+</b></div><p><strong>Built for your next move</strong><small>Discover roles that match your skills</small></p></div>
-</div><div class="art"><div class="glow"></div><div class="orbit"></div><div class="profile"><div class="profile-top">✦ <span>●</span></div><div class="person">👩🏽‍💻</div><h3>Your next chapter</h3><p>Starts with one good match.</p><div class="tags"><span>Creative</span><span>Problem solver</span></div><div class="line"></div><div class="line short"></div><a href="pages/jobs/jobs.html">Explore opportunities ↗</a></div><div class="float match"><b>✦</b><div><strong>AI Match</strong><small>Your skills have potential</small></div><em>92%</em></div><div class="float insight"><b>↗</b><div><strong>Keep growing</strong><small>Turn skills into opportunities</small></div></div></div></div></section>
-<section class="stats"><div class="wrap stats-grid"><div><strong>One platform</strong><small>For candidates & recruiters</small></div><div><strong>Smarter matching</strong><small>Skills meet opportunities</small></div><div><strong>Career focused</strong><small>Tools for your next step</small></div></div></section>
-<section class="section wrap" id="how"><div class="section-head"><div><div class="eyebrow">A BETTER WAY FORWARD</div><h2>Your career journey,<br><em>made simpler.</em></h2></div><p>Everything you need to take the next step, all in one place. Less searching, more meaningful progress.</p></div>
-<div class="cards"><article class="card purple"><div class="icon">⌕</div><small>01 / DISCOVER</small><h3>Find your fit</h3><p>Explore job opportunities and discover roles based on your interests and skills.</p><a href="pages/jobs/jobs.html">Explore jobs ↗</a></article><article class="card peach"><div class="icon">✦</div><small>02 / IMPROVE</small><h3>Grow with AI</h3><p>Get helpful resume feedback, identify skill gaps, and prepare for interviews.</p><a href="pages/auth/register.html">Create your profile ↗</a></article><article class="card green"><div class="icon">◎</div><small>03 / CONNECT</small><h3>Meet the right people</h3><p>Apply for roles and help recruiters find candidates with relevant skills.</p><a href="pages/auth/register.html">Get started ↗</a></article></div></section>
-<section class="recruiter wrap" id="about"><div><div class="eyebrow">HIRING TALENT?</div><h2>Great teams start<br>with great matches.</h2><p>Bring your hiring process together. Create job posts, review applications, and discover talent.</p><a class="btn light" href="pages/auth/register.html">Join as a recruiter ↗</a></div><div class="big-star">✦</div></section>
-</main><footer><div class="wrap foot"><a class="logo" href="index.html"><b>H</b> Hire<span>AI</span></a><p>Smarter connections. Brighter careers.</p><small>© <span id="year"></span> HireAI. Academic project.</small></div></footer>
-<script src="assets/js/main.js"></script></body></html>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="header">
+        <nav class="nav wrap">
+            <a class="logo" href="index.html"><b>H</b> Hire<span>AI</span></a>
+            <button class="menu" id="menu" aria-label="Toggle menu" aria-expanded="false"
+                aria-controls="links">☰</button>
+            <div class="links" id="links"><a class="selected" href="index.html">Home</a><a
+                    href="pages/jobs/jobs.html">Find Jobs</a><a href="#how">How it works</a><a href="#about">About</a>
+            </div>
+            <div class="actions"><a href="pages/auth/login.html">Log in</a><a class="btn small"
+                    href="pages/auth/register.html">Get started ↗</a></div>
+        </nav>
+    </header>
+    <main id="main-content">
+        <section class="hero">
+            <div class="wrap hero-grid">
+                <div class="hero-copy">
+                    <div class="eyebrow"><i></i> YOUR NEXT OPPORTUNITY STARTS HERE</div>
+                    <h1>Find work that<br><em>fits your future.</em></h1>
+                    <p class="intro">A smarter way to discover opportunities. Let AI help you showcase your strengths
+                        and connect with the right people.</p>
+                    <form class="search" id="search"><label>⌕ <input id="keyword"
+                                placeholder="Job title, skill or company"></label><label>⌖ <input id="location"
+                                placeholder="City or remote"></label><button class="btn">Search jobs →</button></form>
+                    <p class="popular"><b>Popular:</b> <a href="pages/jobs/jobs.html?keyword=Developer">Developer</a><a
+                            href="pages/jobs/jobs.html?keyword=Designer">Designer</a><a
+                            href="pages/jobs/jobs.html?keyword=Marketing">Marketing</a><a
+                            href="pages/jobs/jobs.html?keyword=Data">Data Analyst</a></p>
+                    <div class="proof">
+                        <div class="avatars"><b>U</b><b>A</b><b>M</b><b>+</b></div>
+                        <p><strong>Built for your next move</strong><small>Discover roles that match your skills</small>
+                        </p>
+                    </div>
+                </div>
+                <div class="art">
+                    <div class="glow"></div>
+                    <div class="orbit"></div>
+                    <div class="profile">
+                        <div class="profile-top">✦ <span>●</span></div>
+                        <div class="person">👩🏽‍💻</div>
+                        <h3>Your next chapter</h3>
+                        <p>Starts with one good match.</p>
+                        <div class="tags"><span>Creative</span><span>Problem solver</span></div>
+                        <div class="line"></div>
+                        <div class="line short"></div><a href="pages/jobs/jobs.html">Explore opportunities ↗</a>
+                    </div>
+                    <div class="float match"><b>✦</b>
+                        <div><strong>AI Match</strong><small>Your skills have potential</small></div><em>92%</em>
+                    </div>
+                    <div class="float insight"><b>↗</b>
+                        <div><strong>Keep growing</strong><small>Turn skills into opportunities</small></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="stats">
+            <div class="wrap stats-grid">
+                <div><strong>One platform</strong><small>For candidates & recruiters</small></div>
+                <div><strong>Smarter matching</strong><small>Skills meet opportunities</small></div>
+                <div><strong>Career focused</strong><small>Tools for your next step</small></div>
+            </div>
+        </section>
+        <section class="section wrap" id="how">
+            <div class="section-head">
+                <div>
+                    <div class="eyebrow">A BETTER WAY FORWARD</div>
+                    <h2>Your career journey,<br><em>made simpler.</em></h2>
+                </div>
+                <p>Everything you need to take the next step, all in one place. Less searching, more meaningful
+                    progress.</p>
+            </div>
+            <div class="cards">
+                <article class="card purple">
+                    <div class="icon">⌕</div><small>01 / DISCOVER</small>
+                    <h3>Find your fit</h3>
+                    <p>Explore job opportunities and discover roles based on your interests and skills.</p><a
+                        href="pages/jobs/jobs.html">Explore jobs ↗</a>
+                </article>
+                <article class="card peach">
+                    <div class="icon">✦</div><small>02 / IMPROVE</small>
+                    <h3>Grow with AI</h3>
+                    <p>Get helpful resume feedback, identify skill gaps, and prepare for interviews.</p><a
+                        href="pages/auth/register.html">Create your profile ↗</a>
+                </article>
+                <article class="card green">
+                    <div class="icon">◎</div><small>03 / CONNECT</small>
+                    <h3>Meet the right people</h3>
+                    <p>Apply for roles and help recruiters find candidates with relevant skills.</p><a
+                        href="pages/auth/register.html">Get started ↗</a>
+                </article>
+            </div>
+        </section>
+        <section class="recruiter wrap" id="about">
+            <div>
+                <div class="eyebrow">HIRING TALENT?</div>
+                <h2>Great teams start<br>with great matches.</h2>
+                <p>Bring your hiring process together. Create job posts, review applications, and discover talent.</p><a
+                    class="btn light" href="pages/auth/register.html">Join as a recruiter ↗</a>
+            </div>
+            <div class="big-star">✦</div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap foot"><a class="logo" href="index.html"><b>H</b> Hire<span>AI</span></a>
+            <p>Smarter connections. Brighter careers.</p><small>© <span id="year"></span> HireAI. Academic
+                project.</small>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script><script src="assets/js/api.js"></script>
+</body>
+
+</html>
