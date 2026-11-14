@@ -17,13 +17,13 @@ const exampleResume = {
   achievements: ['TCS iON Career Edge — IT Primer Certification', 'Management Information System Certification (NPTEL)'],
   activities: ['Participant, Youth Week 2025 — National Service Scheme (NSS)', 'Participant, MAITREE Sports Fest, GLA University (2024)'],
   declaration: 'I hereby declare that the above information is true and correct to the best of my knowledge.',
-  font: 'Arial, sans-serif', color: '#254d9b', photo: ''
+  font: "'DM Sans', sans-serif", color: '#254d9b', photo: ''
 };
 let resume = loadDraft();
 const paper = document.getElementById('resumePaper');
 const saveStatus = document.getElementById('saveStatus');
 const listTypes = { education: { title: 'Education', date: 'Year or date', subtitle: 'Degree, focus, or extra detail' }, experience: { title: 'Role or course', date: 'Dates', subtitle: 'Organization or focus', details: 'One achievement per line' }, projects: { title: 'Project name', date: 'Dates', subtitle: 'Technologies', details: 'One achievement per line' }, achievements: { title: 'Achievement' }, activities: { title: 'Activity' } };
-function loadDraft() { try { const saved = JSON.parse(localStorage.getItem(STORAGE_KEY)); return saved ? { ...structuredClone(exampleResume), ...saved } : structuredClone(exampleResume) } catch { return structuredClone(exampleResume) } }
+function loadDraft() { try { const saved = JSON.parse(localStorage.getItem(STORAGE_KEY)); if (saved?.font === 'Arial, sans-serif') saved.font = "'DM Sans', sans-serif"; return saved ? { ...structuredClone(exampleResume), ...saved } : structuredClone(exampleResume) } catch { return structuredClone(exampleResume) } }
 function persist(message = 'Draft saved in this browser') { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(resume)); saveStatus.textContent = message } catch { saveStatus.textContent = 'Could not save this draft in browser storage.' } }
 function el(tag, cls, text) { const node = document.createElement(tag); if (cls) node.className = cls; if (text !== undefined) node.textContent = text; return node }
 function fillEditor() { document.querySelectorAll('[data-field]').forEach(input => { input.value = resume[input.dataset.field] || '' }); document.getElementById('resumeFont').value = resume.font; document.getElementById('resumeColor').value = resume.color; Object.keys(listTypes).forEach(renderEditorList); renderPreview() }

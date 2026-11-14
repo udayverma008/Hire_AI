@@ -451,7 +451,7 @@
 .tool-form .field-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.tool-form .field-grid label{margin:0}.company-field[hidden]{display:none}
 .actions [data-logout]{border:0;background:transparent;color:#7457e8;font:700 12px 'DM Sans',sans-serif;cursor:pointer;padding:8px}
 /* Distinct, readable type for job search and job detail pages */
-.job-card,.job-card button,.job-card a,.job-card p,.job-card span,.job-card b,.filterbar,.filter-card,.results-head{font-family:'Plus Jakarta Sans','DM Sans',sans-serif}
-.job-title-row h2,.detail-card h1,.detail-card h2{font-family:'Plus Jakarta Sans',Manrope,sans-serif}
+.job-card,.job-card button,.job-card a,.job-card p,.job-card span,.job-card b,.filterbar,.filter-card,.results-head{font-family:'DM Sans',sans-serif}
+.job-title-row h2,.detail-card h1,.detail-card h2{font-family:Manrope,sans-serif}
 .job-title-row h2{font-weight:700;letter-spacing:-.35px}
 .job-title-row p,.job-desc{font-size:12px;line-height:1.65}
