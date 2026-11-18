@@ -1,7 +1,8 @@
 (function(){
+  const apiOrigin=window.HIREAI_CONFIG?.apiBaseUrl || '';
   async function request(path,options={}){
     const headers={...(options.body?{'Content-Type':'application/json'}:{}),...(options.headers||{})};
-    const response=await fetch(path,{...options,headers,credentials:'same-origin'});
+    const response=await fetch(apiOrigin ? new URL(path,apiOrigin) : path,{...options,headers,credentials:apiOrigin?'include':'same-origin'});
     const payload=await response.json().catch(()=>({}));
     if(!response.ok){const error=new Error(payload.error||`Request failed (${response.status}).`);error.status=response.status;throw error;}
     return payload;

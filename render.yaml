@@ -1,0 +1,13 @@
+services:
+  - type: web
+    runtime: node
+    name: hireai
+    plan: free
+    buildCommand: npm --prefix server ci
+    startCommand: npm --prefix server start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
